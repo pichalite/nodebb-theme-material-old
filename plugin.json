@@ -12,6 +12,8 @@
 	"scripts": [
 		"static/lib/lavender.js",
 		"static/vendor/masonry.js",
-		"static/vendor/imagesLoaded.js"
+		"static/vendor/imagesLoaded.js",
+        "static/vendor/material.min.js",
+        "static/vendor/ripples.min.js"
 	]
 }
