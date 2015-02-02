@@ -1,9 +1,9 @@
 $('document').ready(function() {
 	requirejs([
-		'lavender/masonry',
-		'lavender/imagesLoaded',
-        'lavender/material.min',
-		'lavender/ripples.min',
+		'material/masonry',
+		'material/imagesLoaded',
+        'material/material.min',
+		'material/ripples.min',
 	], function(Masonry, imagesLoaded) {
 		var fixed = localStorage.getItem('fixed') || 0,
 			masonry;
@@ -133,4 +133,11 @@ $('document').ready(function() {
 			return refreshTitle(url);
 		};
 	}());
+    
+    $(function() {
+        
+        $(window).on('action:ajaxify.end', function(data) {
+			$.material.init();
+		});
+    });
 });
