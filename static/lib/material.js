@@ -1,9 +1,9 @@
 $('document').ready(function() {
 	requirejs([
-		'materialDesign/masonry',
-		'materialDesign/imagesLoaded',
-        'materialDesign/ripples',
-        'materialDesign/material',
+		'material/masonry',
+		'material/imagesLoaded',
+        'material/ripples',
+        'material/materialDesign',
 	], function(Masonry, imagesLoaded) {
 		var fixed = localStorage.getItem('fixed') || 0,
 			masonry;
