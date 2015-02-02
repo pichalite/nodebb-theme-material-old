@@ -10,10 +10,10 @@
 		"vendor": "static/vendor"
 	},
 	"scripts": [
-		"static/lib/material.js",
+		"static/lib/lavender.js",
 		"static/vendor/masonry.js",
 		"static/vendor/imagesLoaded.js",
         "static/vendor/ripples.js",
-        "static/vendor/materialDesign.js"
+        "static/vendor/material.js"
 	]
 }
