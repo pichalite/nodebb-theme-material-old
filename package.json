@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-material",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Theme for NodeBB using Google Material Design",
   "main": "theme.less",
   "repository": {
@@ -22,9 +22,6 @@
     "url": "https://github.com/pichalite/nodebb-theme-material/issues"
   },
   "peerDependencies": {
-    "nodebb-theme-vanilla": "^0.2.0"
-  },
-  "nbbpm": {
-    "compatibility": "^0.6.0"
+    "nodebb-theme-vanilla": "^1.0.0"
   }
 }
