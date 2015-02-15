@@ -55,7 +55,8 @@
 					<div class="row">
 						<div class="col-md-8 col-sm-9">
 							<!-- IF privileges.editable -->
-								<i class="fa fa-fw fa-square-o pull-left select pointer"></i>
+							    <input type="checkbox" class="pull-left select" id="{topics.tid}" />
+                                <label for="{topics.tid}" class="pull-left select"></label>
 							<!-- ENDIF privileges.editable -->
 
 							<div class="category-profile-pic">
