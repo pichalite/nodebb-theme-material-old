@@ -6,14 +6,14 @@
 		<div class="col-xs-12">
 			<h4>[[user:browsing]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="openOutgoingLinksInNewTab" /> <strong>[[user:open_links_in_new_tab]]</strong>
+				<div>
+					<input type="checkbox" data-property="openOutgoingLinksInNewTab" id="openOutgoingLinksInNewTab" /> 
+					<label for="openOutgoingLinksInNewTab"><strong>[[user:open_links_in_new_tab]]</strong>
 					</label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="topicSearchEnabled" /> <strong>[[user:enable_topic_searching]]</strong>
+				<div>
+					<input type="checkbox" data-property="topicSearchEnabled" id="topicSearchEnabled" /> 
+					<label for="topicSearchEnabled"><strong>[[user:enable_topic_searching]]</strong>
 					</label>
 				</div>
 				<p class="help-block">[[user:topic_search_help]]</p>
@@ -21,20 +21,17 @@
 
 			<h4>[[global:privacy]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" /> <strong>[[user:show_email]]</strong>
-					</label>
+				<div>
+					<input type="checkbox" data-property="showemail" id="showemail" /> 
+					<label for="showemail"><strong>[[user:show_email]]</strong></label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" /> <strong>[[user:show_fullname]]</strong>
-					</label>
+				<div>
+					<input type="checkbox" data-property="showfullname" id="showfullname" /> 
+					<label for="showfullname"><strong>[[user:show_fullname]]</strong></label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" /> <strong>[[user:restrict_chats]]</strong>
-					</label>
+				<div>
+					<input type="checkbox" data-property="restrictChat" id="restrictChat" /> 
+					<label for="restrictChat"><strong>[[user:restrict_chats]]</strong></label>
 				</div>
 			</div>
 
@@ -52,15 +49,15 @@
 					<p class="help-block">[[user:digest_description]]</p>
 				</div>
 
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendChatNotifications" /> <strong>[[user:send_chat_notifications]]</strong>
+				<div>
+				    <input type="checkbox" data-property="sendChatNotifications" id="sendChatNotifications" /> 
+				    <label for="sendChatNotifications"><strong>[[user:send_chat_notifications]]</strong>
 					</label>
 				</div>
 
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendPostNotifications" /> <strong>[[user:send_post_notifications]]</strong>
+				<div>
+					<input type="checkbox" data-property="sendPostNotifications" id="sendPostNotifications" /> 
+					<label for="sendPostNotifications"><strong>[[user:send_post_notifications]]</strong>
 					</label>
 				</div>
 				<!-- ENDIF !disableEmailSubscriptions -->
@@ -68,24 +65,23 @@
 
 			<h4>[[user:follow]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnCreate"> <strong>[[user:follow_topics_you_create]]</strong>
+				<div>
+					<input type="checkbox" data-property="followTopicsOnCreate" id="followTopicsOnCreate"> 
+				    <label for="followTopicsOnCreate"><strong>[[user:follow_topics_you_create]]</strong>
 					</label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnReply"> <strong>[[user:follow_topics_you_reply_to]]</strong>
+				<div>
+					<input type="checkbox" data-property="followTopicsOnReply" id="followTopicsOnReply"> 
+					<label for="followTopicsOnReply"><strong>[[user:follow_topics_you_reply_to]]</strong>
 					</label>
 				</div>
 			</div>
 
 			<h4>[[global:pagination]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="usePagination"> <strong>[[user:paginate_description]]</strong>
-					</label>
+				<div>
+				    <input type="checkbox" data-property="usePagination" id="usePagination"> 
+				    <label for="usePagination"><strong>[[user:paginate_description]]</strong></label>
 				</div>
 
 				<strong>[[user:topics_per_page]]</strong><br /> <input type="text" class="form-control" data-property="topicsPerPage"><br />
@@ -94,11 +90,8 @@
 
 			<h4>[[global:header.notifications]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="notificationSounds"> <strong>[[user:notification_sounds]]</strong>
-					</label>
-				</div>
+				<input type="checkbox" data-property="notificationSounds" id="notificationSounds"> 
+				<label for="notificationSounds"><strong>[[user:notification_sounds]]</strong></label>
 			</div>
 
 			<h4>[[global:language]]</h4>
