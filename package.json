@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-material",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Theme for NodeBB using Google Material Design",
   "main": "theme.less",
   "repository": {
