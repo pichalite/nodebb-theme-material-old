@@ -32,7 +32,7 @@
 	<button class="btn btn-primary btn-raised post_reply" type="button">[[topic:reply]]</button>
 	<!-- ELSE -->
 		<!-- IF !loggedIn -->
-		<a href="/login?next=topic/{slug}" class="btn btn-primary btn-raised">[[topic:reply]]</a>
+		<a href="/login?next=topic/{slug}" class="btn btn-primary btn-raised">[[topic:guest-login-reply]]</a>
 		<!-- ENDIF !loggedIn -->
 	<!-- ENDIF privileges.topics:reply -->
 

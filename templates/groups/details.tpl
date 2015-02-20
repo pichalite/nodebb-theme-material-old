@@ -19,7 +19,7 @@
 			</div>
 			<div class="panel-body">
 				<h1>{group.name}</h1>
-				<p>{group.description}</p>
+				<p>{group.descriptionParsed}</p>
 				<!-- IF loggedIn -->
 				<div class="pull-right">
 					{function.membershipBtn, group}
@@ -50,12 +50,12 @@
 								<ul class="dropdown-menu" role="menu">
 									<li>
 										<a href="#" data-ajaxify="false" data-action="toggleOwnership">
-											Grant/Rescind Ownership
+											[[groups:details.grant]]
 										</a>
 									</li>
 									<li>
 										<a href="#" data-ajaxify="false" data-action="kick">
-											Kick
+											[[groups:details.kick]]
 										</a>
 									</li>
 								</ul>
@@ -119,7 +119,7 @@
 					</div>
 					<div class="form-group">
 						<label for="name">Description</label>
-						<input class="form-control" name="description" id="description" type="text" value="{group.description}" />
+						<textarea class="form-control" name="description" id="description" type="text">{group.description}</textarea>
 					</div>
 					<div class="form-group">
 						<label>Badge Preview</label>

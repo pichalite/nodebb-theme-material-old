@@ -45,17 +45,20 @@
 			<!-- ENDIF isTopic -->
 			<!-- IF showTags -->
 			<div class="tags-container <!-- IF isTopic -->col-sm-9<!-- ELSE -->col-sm-12<!-- ENDIF isTopic-->">
-				<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here]]" tabIndex="2"/>
+				<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here, {minimumTagLength}, {maximumTagLength}]]" tabIndex="2"/>
 			</div>
 			<!-- ENDIF showTags -->
 		</div>
 
 		<div class="btn-toolbar formatting-bar">
 			<div class="btn-group">
-				<span class="btn btn-link" tabindex="-1"><i class="fa fa-bold"></i></span>
-				<span class="btn btn-link" tabindex="-1"><i class="fa fa-italic"></i></span>
-				<span class="btn btn-link" tabindex="-1"><i class="fa fa-list"></i></span>
-				<span class="btn btn-link" tabindex="-1"><i class="fa fa-link"></i></span>
+				<!-- BEGIN formatting -->
+					<!-- IF formatting.spacer -->
+					<span class="btn spacer"></span>
+					<!-- ELSE -->
+					<span class="btn btn-link" tabindex="-1" data-format="{formatting.name}"><i class="{formatting.className}"></i></span>
+					<!-- ENDIF formatting.spacer -->
+				<!-- END formatting -->
 
 				<!--[if gte IE 9]><!-->
 					<span class="btn btn-link img-upload-btn hide" tabindex="-1">
