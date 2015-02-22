@@ -60,7 +60,7 @@
 						<div class="col-md-8 col-sm-9">
 							<!-- IF privileges.editable -->
 							    <input type="checkbox" class="pull-left select" id="{topics.tid}" />
-                                <label for="{topics.tid}" class="pull-left select"></label>
+                                <label for="{topics.tid}" class="pull-left"></label>
 							<!-- ENDIF privileges.editable -->
 
 							<div class="category-profile-pic">
