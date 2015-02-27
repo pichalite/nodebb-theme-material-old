@@ -118,12 +118,16 @@
 						<label for="name">[[groups:details.description]]</label>
 						<textarea class="form-control" name="description" id="description" type="text">{group.description}</textarea>
 					</div>
-					<div class="form-group">
-						<label>[[groups:details.badge_preview]]</label>
-						<span class="label" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> {group.userTitle}</span>
+					<div class="form-group user-title-option">
+						<label for="userTitle">[[groups:details.badge_text]]</label>
+						<input class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled --> />
+					</div>
+					<div class="form-group user-title-option">
+						<label>[[groups:details.badge_preview]]</label><br />
+						<span class="label<!-- IF !userTitleEnabled --> hide<!-- ENDIF !userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.name}<!-- ENDIF group.userTitle --></span>
 
-						<button type="button" class="btn btn-default btn-sm btn-raised" data-action="icon-select">Change Icon</button>
-						<button type="button" class="btn btn-default btn-sm btn-raised" data-action="color-select">Change Colour</button>
+						<button type="button" class="btn btn-default btn-sm btn-raised" data-action="icon-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_icon]]</button>
+						<button type="button" class="btn btn-default btn-sm btn-raised" data-action="color-select"<!-- IF !userTitleEnabled --> disabled<!-- ENDIF !userTitleEnabled -->>[[groups:details.change_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" style="display:none;">
@@ -135,14 +139,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}" />
-					</div>
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> <strong>[[groups:details.private]]</strong>
+						        <input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <strong>[[groups:details.userTitleEnabled]]</strong>
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input name="private" id="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> <label for="private"><strong>[[groups:details.private]]</strong></label>
 							<p class="help-block">
 								[[groups:details.private_help]]
 				            </p>
@@ -150,7 +155,7 @@
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->> <strong>[[groups:details.hidden]]</strong>
+                            <input name="hidden" id="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->> <label for="hidden"><strong>[[groups:details.hidden]]</strong></label>
 							<p class="help-block">
 								[[groups:details.hidden_help]]
 							</p>
