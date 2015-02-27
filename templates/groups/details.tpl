@@ -142,7 +142,7 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-						        <input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <strong>[[groups:details.userTitleEnabled]]</strong>
+						        <input name="userTitleEnabled" id="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <label for="userTitleEnabled"><strong>[[groups:details.userTitleEnabled]]</strong></label>
 						</label>
 					</div>
 					<div class="checkbox">
