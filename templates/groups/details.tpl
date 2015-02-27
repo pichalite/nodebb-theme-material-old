@@ -141,25 +141,25 @@
 					</div>
 					<hr />
 					<div class="checkbox">
-						<label>
+						<span>
 						        <input name="userTitleEnabled" id="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <label for="userTitleEnabled"><strong>[[groups:details.userTitleEnabled]]</strong></label>
-						</label>
+						</span>
 					</div>
 					<div class="checkbox">
-						<label>
+						<span>
 							<input name="private" id="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> <label for="private"><strong>[[groups:details.private]]</strong></label>
 							<p class="help-block">
 								[[groups:details.private_help]]
 				            </p>
-						</label>
+						</span>
 					</div>
 					<div class="checkbox">
-						<label>
+						<span>
                             <input name="hidden" id="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->> <label for="hidden"><strong>[[groups:details.hidden]]</strong></label>
 							<p class="help-block">
 								[[groups:details.hidden_help]]
 							</p>
-						</label>
+						</span>
 					</div>
 
 					<button class="btn btn-link btn-xs pull-right btn-raised" type="button" data-action="delete">Delete Group</button>
