@@ -76,6 +76,20 @@
 					</label>
 				</div>
 			</div>
+			
+			<h4>[[groups:groups]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="grouptitle">[[user:grouptitle]]</label>
+					<select class="form-control" id="grouptitle" data-property="groupTitle">
+						<!-- BEGIN userGroups -->
+						<!-- IF userGroups.userTitleEnabled -->
+						<option value="{userGroups.name}">{userGroups.userTitle}</option>
+						<!-- ENDIF userGroups.userTitleEnabled -->
+						<!-- END userGroups -->
+					</select>
+				</div>
+			</div>
 
 			<h4>[[global:pagination]]</h4>
 			<div class="well">
@@ -96,7 +110,7 @@
 
 			<h4>[[global:language]]</h4>
 			<div class="well">
-				<select data-property="language" class="form-control">
+				<select data-property="userLang" class="form-control">
 					<!-- BEGIN languages -->
 					<option value="{languages.code}">{languages.name} ({languages.code})</option>
 					<!-- END languages -->
