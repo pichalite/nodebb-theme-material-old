@@ -64,17 +64,16 @@
 		margin-bottom: 20px;
 		box-shadow: none;
 
-		.category-icon {
-			margin-left: -8px;
-			margin-right: -8px;
-		}
 	}
 }
-
 
 .category-item {
 	padding-left: 8px !important;
 	padding-right: 8px !important;
+    
+    .select {
+		line-height:55px;
+	}
 
 	.category-icon {
 		-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
@@ -125,6 +124,7 @@
 		.post-preview {
 			padding:10px;
 		}
+        
 	}
 	.category-box:after, .category-box:before {
 		bottom: 100%;
@@ -170,6 +170,11 @@
 			margin-right: 5px;
 			border-radius: 50%;
  		}
+        
+        hr {
+			margin-bottom: 10px;
+			margin-top: 5px;
+		}
 
 		.post-preview-content {
 
@@ -184,14 +189,6 @@
 			blockquote {
 				border-left-width: 3px;
 			}
-
-			hr {
-				margin-bottom: 10px;
-				margin-top: 5px;
-			}
-			.content {
-				margin-left: 30px;
-			}
 		}
 
 		.footer {
@@ -199,14 +196,4 @@
 			font-size: 12px
 		}
 	}
-}
-
-.category-item {
-	.select {
-		line-height:55px;
-	}
-}
-
-.category .recent-replies ul li span {
-	margin-bottom: 20px;
 }
