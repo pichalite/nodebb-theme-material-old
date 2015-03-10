@@ -10,9 +10,14 @@
 				<input class="title form-control" type="text" tabIndex="2" placeholder="[[topic:composer.title_placeholder]]" />
 			</div>
 			<!-- ELSE -->
-			<div class="col-lg-12">
+			<div class="<!-- IF isTopic -->col-lg-9<!-- ELSE -->col-lg-12<!-- ENDIF isTopic -->">
 				<input class="title form-control" type="text" tabIndex="1" placeholder="[[topic:composer.title_placeholder]]" />
 			</div>
+			<!-- IF isTopic -->
+			<div class="category-list-container col-lg-3">
+				<select class="form-control category-list"></select>
+			</div>
+			<!-- ENDIF isTopic -->
 			<!-- ENDIF showHandleInput -->
 		</div>
 
@@ -38,67 +43,64 @@
 		<!--  ENDIF allowTopicsThumbnail -->
 
 		<div class="row category-tag-row">
-			<!-- IF isTopic -->
-			<div class="col-sm-3 category-list-container">
-				<select class="form-control category-list"></select>
-			</div>
-			<!-- ENDIF isTopic -->
-			<!-- IF showTags -->
-			<div class="tags-container <!-- IF isTopic -->col-sm-9<!-- ELSE -->col-sm-12<!-- ENDIF isTopic-->">
-				<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here, {minimumTagLength}, {maximumTagLength}]]" tabIndex="2"/>
-			</div>
-			<!-- ENDIF showTags -->
-		</div>
+			<div class="btn-toolbar formatting-bar">
+				<div class="btn-group">
+					<!-- BEGIN formatting -->
+						<!-- IF formatting.spacer -->
+						<span class="btn spacer"></span>
+						<!-- ELSE -->
+						<!-- IF !formatting.mobile -->
+						<span class="btn btn-link" tabindex="-1" data-format="{formatting.name}"><i class="{formatting.className}"></i></span>
+						<!-- ENDIF !formatting.mobile -->
+						<!-- ENDIF formatting.spacer -->
+					<!-- END formatting -->
 
-		<div class="btn-toolbar formatting-bar">
-			<div class="btn-group">
-				<!-- BEGIN formatting -->
-					<!-- IF formatting.spacer -->
-					<span class="btn spacer"></span>
-					<!-- ELSE -->
-					<span class="btn btn-link" tabindex="-1" data-format="{formatting.name}"><i class="{formatting.className}"></i></span>
-					<!-- ENDIF formatting.spacer -->
-				<!-- END formatting -->
-
-				<!--[if gte IE 9]><!-->
-					<span class="btn btn-link img-upload-btn hide" data-format="picture" tabindex="-1">
-						<i class="fa fa-picture-o"></i>
-					</span>
-					<span class="btn btn-link file-upload-btn hide" data-format="upload" tabindex="-1">
-						<i class="fa fa-upload"></i>
-					</span>
-				<!--<![endif]-->
-
-				<span class="btn btn-link help hidden" tab-index="-1"><i class="fa fa-question"></i></span>
-
-				<form id="fileForm" method="post" enctype="multipart/form-data">
 					<!--[if gte IE 9]><!-->
-						<input type="file" id="files" name="files[]" multiple class="gte-ie9 hide"/>
+						<span class="btn btn-link img-upload-btn hide" data-format="picture" tabindex="-1">
+							<i class="fa fa-picture-o"></i>
+						</span>
+						<span class="btn btn-link file-upload-btn hide" data-format="upload" tabindex="-1">
+							<i class="fa fa-upload"></i>
+						</span>
 					<!--<![endif]-->
-					<!--[if lt IE 9]>
-						<input type="file" id="files" name="files[]" class="lt-ie9 hide" value="Upload"/>
-					<![endif]-->
+					
+					<form id="fileForm" method="post" enctype="multipart/form-data">
+						<!--[if gte IE 9]><!-->
+							<input type="file" id="files" name="files[]" multiple class="gte-ie9 hide"/>
+						<!--<![endif]-->
+						<!--[if lt IE 9]>
+							<input type="file" id="files" name="files[]" class="lt-ie9 hide" value="Upload"/>
+						<![endif]-->
 
-				</form>
+			        </form>
 
-			</div>
-			<div class="btn-group pull-right action-bar">
-				<button class="btn btn-default btn-raised" data-action="discard" tabIndex="5"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
-				<button class="btn btn-primary btn-raised" data-action="post" tabIndex="4"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
+				</div>
+				<div class="btn-group pull-right action-bar">
+					<button class="btn btn-default btn-raised" data-action="discard" tabIndex="5"><i class="fa fa-times"></i> [[topic:composer.discard]]</button>
+					<button class="btn btn-primary btn-raised" data-action="post" tabIndex="4"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
+				</div>
+
+				<!-- IF showTags -->
+				<div class="tags-container inline-block">
+					<input class="tags" type="text" class="form-control" placeholder="[[tags:enter_tags_here, {minimumTagLength}, {maximumTagLength}]]" tabIndex="2"/>
+				</div>
+				<!-- ENDIF showTags -->
 			</div>
 		</div>
 
 		<div class="row write-preview-container">
 			<div class="col-md-6 col-sm-12 write-container">
+			    <div class="help-text">Compose <span class="help hidden"><i class="fa fa-question-circle"></i></span></div>
 				<textarea class="write" tabIndex="3"></textarea>
 			</div>
 			<div class="col-md-6 hidden-sm hidden-xs preview-container">
+			    <div class="help-text">Preview</div>
 				<div class="preview well"></div>
 			</div>
 		</div>
 
 		<div class="imagedrop"><div>[[topic:composer.drag_and_drop_images]]</div></div>
 
-		<div class="resizer"><div class="trigger text-center"><i class="fa fa-chevron-up"></i></div></div>
+		<div class="resizer"><div class="trigger text-center"><i class="fa"></i></div></div>
 	</div>
 </div>
