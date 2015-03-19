@@ -6,7 +6,7 @@
 <input type="hidden" template-variable="pageCount" value="{pageCount}" />
 
 <div class="category row">
-	<div class="{topic_row_size}" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
+	<div class="col-md-9" no-widget-class="col-lg-12 col-sm-12" no-widget-target="sidebar">
 		<!-- IMPORT partials/breadcrumbs.tpl -->
 		<div class="subcategories row">
 			<!-- BEGIN children -->
@@ -25,8 +25,14 @@
 
 			<span class="pull-right">
 				<!-- IF loggedIn -->
-				<button type="button" class="btn btn-default btn-raised btn-success watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->"><i class="fa fa-eye"></i> [[topic:watch]]</button>
-				<button type="button" class="btn btn-default btn-raised btn-warning ignore <!-- IF isIgnored -->hidden<!-- ENDIF isIgnored -->"><i class="fa fa-eye-slash"></i> [[category:ignore]]</button>
+				<button type="button" class="btn btn-default btn-success btn-raised watch <!-- IF !isIgnored -->hidden<!-- ENDIF !isIgnored -->">
+					<i class="fa fa-eye"></i>
+					<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:watch]]</span>
+				</button>
+				<button type="button" class="btn btn-default btn-warning btn-raised ignore <!-- IF isIgnored -->hidden<!-- ENDIF isIgnored -->">
+                    <i class="fa fa-eye-slash"></i>
+					<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[category:ignore]]</span>
+				</button>
 				<!-- ENDIF loggedIn -->
 
 				<!-- IMPORT partials/category_tools.tpl -->
@@ -35,7 +41,9 @@
 
 				<div class="dropdown share-dropdown inline-block">
 					<button type="button" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown">
-						[[topic:share]] <span class="caret"></span>
+						<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:share]]</span>
+						<span class="visible-xs-inline"><i class="fa fa-fw fa-share-alt"></i></span>
+						<span class="caret"></span>
 					</button>
 
 					<!-- IMPORT partials/share_dropdown.tpl -->
