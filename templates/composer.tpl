@@ -90,7 +90,7 @@
 					<button class="btn btn-primary btn-raised" data-action="post" tabindex="6"><i class="fa fa-check"></i> [[topic:composer.submit]]</button>
 					<!-- IF !isEditing -->
 					<!-- IF isAdminOrMod -->
-					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<button type="button" class="btn btn-info btn-raised dropdown-toggle" data-toggle="dropdown">
 						<span class="caret"></span>
 						<span class="sr-only">Toggle Dropdown</span>
 					</button>
