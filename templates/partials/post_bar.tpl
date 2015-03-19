@@ -19,17 +19,19 @@
 	<span class="browsing-users hidden">
 		&bull;
 		<small><span>[[category:browsing]]</span></small>
-		<div class="thread_active_users active-users inline-block"></div>
-		<small class="hidden"><i class="fa fa-users"></i> <span class="user-count"></span></small>
+		<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
+		<small class="hidden">
+			<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
+		</small>
 	</span>
 </div>
 
 <div class="topic-main-buttons pull-right inline-block">
 	<div class="loading-indicator" done="0" style="display:none;">
-		<span class="hidden-xs-inline">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
+		<span class="hidden-xs">[[topic:loading_more_posts]]</span> <i class="fa fa-refresh fa-spin"></i>
 	</div>
 	<!-- IF privileges.topics:reply -->
-	<button class="btn btn-primary btn-raised post_reply" type="button">[[topic:reply]]</button>
+	<button component="topic/reply" class="btn btn-primary btn-raised post_reply" type="button">[[topic:reply]]</button>
 	<!-- ELSE -->
 		<!-- IF !loggedIn -->
 		<a href="/login?next=topic/{slug}" class="btn btn-primary btn-raised">[[topic:guest-login-reply]]</a>
